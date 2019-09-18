@@ -7,15 +7,15 @@ import 'vuesax/dist/vuesax.css' //Vuesax styles
 
 // UI Library components
 Vue.use(Vuesax, {
-  // theme:{
-  //   colors:{
-  //     primary:'#F2B6B6',
-  //     success:'#afe833',
-  //     danger:'#afe833',
-  //     warning:'#e8af33',
-  //     dark:'#2e2b29'
-  //   }
-  // }
+  theme:{
+    colors:{
+      primary:'#19d1bb',
+      success:'#afe833',
+      danger:'#afe833',
+      warning:'#e8af33',
+      dark:'#2e2b29'
+    }
+  }
 })
 
 Vue.config.productionTip = false

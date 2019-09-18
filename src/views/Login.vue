@@ -1,17 +1,17 @@
 <template>
-  <box-field>
+  <Wrapper>
     <div class="centerx form">
       <vs-input label="Identifiant" placeholder="John Doe" v-model="identifier"/>
       <vs-input type="password" label="Mot de passe" placeholder="Votre mot de passe" v-model="password"/>
     </div>
-  </box-field>
+  </Wrapper>
 </template>
 
 <script>
-import BoxField from '@/components/templates/BoxField'
+import Wrapper from '@/components/Wrapper'
 export default {
   components: {
-    BoxField
+    Wrapper
   },
 
   data: () => ({

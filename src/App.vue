@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <nav-bar />
-    <vs-row vs-justify="center" class="padding">
-      <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="12">
+    <Navigation />
+    <vs-row vs-justify="center" class="main">
+      <vs-col class="content" type="flex" vs-justify="center" vs-align="center" vs-w="12">
         <Container>
           <router-view/>
         </Container>
@@ -12,26 +12,29 @@
 </template>
 
 <script>
-import Container from '@/components/templates/Container'
-import NavBar from '@/components/organisms/NavBar'
+import Container from '@/components/Container'
+import Navigation from '@/components/Navigation'
 
 export default {
   components: {
     Container,
-    NavBar
+    Navigation
   }  
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Manjari&display=swap');
 
-$theme-color-wheel1: #4AB1FF;
-$theme-color-wheel2: #43CCE8;
-$theme-color-wheel3: #57FFEF;
-$theme-color-wheel4: #43E8A9;
-$theme-color-wheel5: #4AFF86;
+// $theme-color-wheel1: #4AB1FF;
+// $theme-color-wheel2: #43CCE8;
+// $theme-color-wheel3: #57FFEF;
+// $theme-color-wheel4: #43E8A9;
+// $theme-color-wheel5: #4AFF86;
 
+
+
+// GLOBAL LAYOUTS
 #app {
   font-family: 'Manjari', sans-serif;
 
@@ -41,8 +44,22 @@ $theme-color-wheel5: #4AFF86;
     justify-content: center;
     min-height: calc(100vh - 66px);
   }
-  .padding {
-    padding: .5em
+  .main {
+    padding: .5em;
   }
+  .content {
+    margin-top: 1em;
+  }
+}
+
+// TYPOGRAPHY
+h1, h2 {
+  margin-bottom: 10px
+}
+h1 {
+  font-size: 24px;
+}
+h2 {
+  font-size: 18px;
 }
 </style>
